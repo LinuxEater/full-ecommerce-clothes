@@ -128,10 +128,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 #static files config
-STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static'
-STATICFILES_DIRS = [ 'store/static',]  # Custom static files directory]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    BASE_DIR / "ecommerce_main" / "static",
+]
+
+STATIC_URL = '/static/'
+
 
 #media folder config
 MEDIA_URL = '/media/'
